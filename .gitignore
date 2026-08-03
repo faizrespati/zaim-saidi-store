@@ -47,14 +47,7 @@ Desktop.ini
 *.swo
 
 # Generated Prisma Client
-packages/database/src/generated/prisma/
+server/database/src/generated/prisma/
 
 # Local database certificates
-packages/database/certs/
-
-# Local project notes and test artifacts
-/__notes/
-
-# Local uploaded book covers
-apps/api/var/book-covers/*
-!apps/api/var/book-covers/.gitkeep
+server/certs/

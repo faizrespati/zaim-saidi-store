@@ -50,12 +50,14 @@ const getLocalIpAddress = () => {
   return 'localhost';
 };
 
-// Menyalakan Server menggunakan '0.0.0.0' agar bisa diakses lewat localhost & Network sekaligus
-app.listen(PORT, '0.0.0.0', () => {
-  const localIp = getLocalIpAddress();
-  console.log(`--------------------------------------------------`);
-  console.log(`  🚀 Server Backend Toko Buku Berhasil Menyala!`);
-  console.log(`  - Local:   http://localhost:${PORT}`);
-  console.log(`  - Network: http://${localIp}:${PORT}`);
-  console.log(`--------------------------------------------------`);
-});
+// HANYA jalankan app.listen jika sedang di komputer lokal (bukan di Vercel)
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, '0.0.0.0', () => {
+    const localIp = getLocalIpAddress();
+    console.log(`--------------------------------------------------`);
+    console.log(`  🚀 Server Backend Toko Buku Berhasil Menyala!`);
+    console.log(`  - Local:   http://localhost:${PORT}`);
+    console.log(`  - Network: http://${localIp}:${PORT}`);
+    console.log(`--------------------------------------------------`);
+  });
+}
