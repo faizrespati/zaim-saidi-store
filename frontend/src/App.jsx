@@ -33,7 +33,7 @@ export default function Homepage() {
 
   // AMBIL DATA DARI BACKEND EXPRESS KITA SAAT HALAMAN DIBUKA
   useEffect(() => {
-    fetch('http://localhost:5000/api/books')
+    fetch('https://zaim-saidi-store.vercel.app/api/books')
       .then((res) => res.json())
       .then((result) => {
         if (result.success) {
@@ -161,7 +161,7 @@ export default function Homepage() {
 
     try {
       // 2. Kirim data pesanan ke backend Express
-      const response = await fetch('http://localhost:5000/api/orders', {
+      const response = await fetch('https://zaim-saidi-store.vercel.app/api/orders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

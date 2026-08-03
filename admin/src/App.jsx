@@ -10,7 +10,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/orders');
+        const response = await fetch('https://zaim-saidi-store.vercel.app/api/orders');
         const result = await response.json();
         if (result.success) {
           setOrders(result.data);
@@ -36,7 +36,7 @@ export default function AdminDashboard() {
 
   const handleStatusChange = async (orderId, newStatus) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/orders/${orderId}/status`, {
+      const response = await fetch(`https://zaim-saidi-store.vercel.app/api/orders/${orderId}/status`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: newStatus })
@@ -44,7 +44,7 @@ export default function AdminDashboard() {
       const result = await response.json();
       if (result.success) {
         // Refresh instan setelah status diubah
-        const res = await fetch('http://localhost:5000/api/orders');
+        const res = await fetch('https://zaim-saidi-store.vercel.app/api/orders');
         const data = await res.json();
         if (data.success) setOrders(data.data);
       } else {
