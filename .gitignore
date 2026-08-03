@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+build/
+.next/
+out/
+.astro/
+.vite/
+.turbo/
+.cache/
+coverage/
+**/coverage/
+*.tsbuildinfo
+.eslintcache
+
+# Environment variables
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Generated Prisma Client
+packages/database/src/generated/prisma/
+
+# Local database certificates
+packages/database/certs/
+
+# Local project notes and test artifacts
+/__notes/
+
+# Local uploaded book covers
+apps/api/var/book-covers/*
+!apps/api/var/book-covers/.gitkeep
