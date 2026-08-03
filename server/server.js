@@ -61,3 +61,6 @@ if (process.env.NODE_ENV !== 'production') {
     console.log(`--------------------------------------------------`);
   });
 }
+
+// ⚠️ INI YANG KURANG DAN WAJIB ADA AGAR VERCEL TIDAK CRASH:
+export default app;
