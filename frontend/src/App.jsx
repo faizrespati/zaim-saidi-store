@@ -189,7 +189,7 @@ export default function Homepage() {
       message += `\n*(No. Pesanan Sistem: #${result.orderId})*`;
 
       const encodedMessage = encodeURIComponent(message);
-      const adminWhatsAppNumber = "6281234567890"; // Ganti dengan nomor WhatsApp tokoku
+      const adminWhatsAppNumber = "62895396921984"; // Ganti dengan nomor WhatsApp tokoku
 
       // 4. Buka tab WhatsApp
       window.open(`https://wa.me/${adminWhatsAppNumber}?text=${encodedMessage}`, '_blank');
